@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <button 
+        class="btn btn-primary"
+        (click)="insertLog()"
+        >
+        Display Details
+      </button>
+      <!-- "{'background-color': getColor()}" -->
+      <p *ngIf="showPara">SecretPassword = "tuna"</p>
+      <div *ngFor="let log of logs; let i=index">
+        <p 
+          [ngStyle]="{'background-color': i>4 ? 'blue' : ''}"
+          [ngClass]="{wh: i>4}"
+          >
+          {{log}}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- [ngClass]="{online: serverStatus == 'online'}" -->

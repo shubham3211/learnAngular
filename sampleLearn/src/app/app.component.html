@@ -1,0 +1,9 @@
+<header (selectedComponent)="displaySelectedComponent($event)"></header>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <app-recepies *ngIf="selectedComponent == 'recipe'"></app-recepies>
+      <app-shopping-list *ngIf="selectedComponent != 'recipe'"></app-shopping-list>
+    </div>
+  </div>
+</div>

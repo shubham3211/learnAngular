@@ -1,0 +1,16 @@
+<!-- <div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h3>I am in the app component</h3>
+      <hr>
+      <app-servers></app-servers>
+    </div>
+  </div>
+</div> -->
+<div class="container">
+  <div class="row">
+    <app-game-control (intervalFired)="onIntervalFired($event)"></app-game-control>
+    <app-even *ngFor="let num of even" [num]="num"></app-even>
+    <app-odd *ngFor="let num of odd" [num]="num" ></app-odd>
+  </div>
+</div>
